@@ -7,11 +7,16 @@ let init = 0
 
 const botSay = (data) => {
   return [
-    "Perkenalkan nama saya deabot. siapa nama kamu?",
+    "Perkenalkan nama saya testing bot. siapa nama kamu?",
     `Halo ${data?.nama}, berapa usia kamu?`,
     `Ohhh ${data?.usia}, hobi kamu apa ya?`,
     `wawww sama dong aku juga hobi ${data?.hobi}, btw punya pacar gak?`,
-    `ohhh ${data?.pacar}, ya udah kalau gitu. udahan yah?`,
+    `ohhh ${data?.pacar}, film favorit kamu apa?`,
+    `wihh sama dong ${data?.film}, target kamu ke depan nya apa nih?`,
+    `semoga tercapai ya ${data?.target}, kamu suka coding gak?`,
+    `aku juga ${data?.coding}, kamu suka bermain game gak?`,
+    `ohh ${data?.game}, kamu suka lagu 90an gak?`,
+    `saya juga ${data?.lagu}, sekian dulu ya bot hari ini.`,
   ]
 }
 
@@ -31,6 +36,16 @@ function botStart() {
   } else if (init === 4) {
     botDelay({ pacar: jawaban.value })
   } else if (init === 5) {
+    botDelay({ film: jawaban.value })
+  } else if (init === 6) {
+  botDelay({ target: jawaban.value })
+  } else if (init === 7) {
+  botDelay({ coding: jawaban.value })
+  } else if (init === 8) {
+  botDelay({ game: jawaban.value })
+  } else if (init === 9) {
+  botDelay({ lagu: jawaban.value })
+  } else if (init === 10) {
     finishing()
   } else {
     botEnd()
@@ -50,7 +65,7 @@ function botDelay(jawabanUser) {
 }
 
 function finishing() {
-  pertanyaan.innerHTML = `Thank u ya ${usersData[0]} udah main ke deabot 😉, kali-kali kita main ${usersData[2]} bareng ya!`
+  pertanyaan.innerHTML = `Thank u ya ${usersData[0]} udah main ke testing bot 😉, kali-kali kita main ${usersData[2]} bareng ya!`
   jawaban.value = "siap thanks juga!"
 }
 

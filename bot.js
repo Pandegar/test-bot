@@ -16,7 +16,7 @@ const botSay = (data) => {
     `semoga tercapai ya ${data?.target}, kamu suka coding gak?`,
     `aku juga ${data?.coding}, kamu suka bermain game gak?`,
     `ohh ${data?.game}, kamu suka lagu 90an gak?`,
-    `saya juga ${data?.lagu}, sekian dulu ya bot hari ini.`,
+    `aku juga ${data?.lagu}, sekian dulu ya bot hari ini.`,
   ]
 }
 
